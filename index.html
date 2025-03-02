@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Board</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#F4F7FF]">
+    <section class="max-w-8/12 min-h-screen mx-auto pt-10">
+      <!-- navbar -->
+      <nav>
+        <div>
+          <div class="navbar bg-base-100 justify-between rounded-lg px-3">
+            <div class="flex gap-3 items-center">
+              <img class="w-10" src="assets/logo.png" alt="" />
+              <a class=""><img src="assets/DevBoard.png" alt="" /></a>
+            </div>
+            <div class="flex gap-4 items-center">
+              <div
+                class="flex items-center gap-2 bg-[#F4F7FF] py-2 px-3 rounded-full"
+              >
+                <img class="w-7" src="assets/checkbox.png" alt="" />
+                <h2 id="nav-count" class="font-bold text-xl">23</h2>
+              </div>
+              <div id="dynamic" class="btn btn-circle">
+                <div class="w-14">
+                  <img
+                    class="rounded-full bg-[#F4F7FF] p-1"
+                    alt="Tailwind CSS Navbar component"
+                    src="assets/theme-btn.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- main part -->
+      <main class="mt-4 flex gap-4">
+        <div class="bg-white rounded-lg p-5">
+          <!-- like nav -->
+          <div class="grid grid-cols-4 gap-3">
+            <!-- child 1 -->
+            <div
+              class="bg-[#F4F7FF] rounded-lg flex items-center justify-center gap-4 py-2"
+            >
+              <div class="bg-white p-2 rounded-full">
+                <img class="p-1 w-12" src="assets/checkbox.png" alt="" />
+              </div>
+              <div>
+                <p>Task Assigned</p>
+                <h1 id="mines" class="font-bold text-lg">6</h1>
+              </div>
+            </div>
+            <!-- child 2 -->
+            <div
+              id="child-2"
+              class="col-span-2 rounded-lg flex items-center gap-2 px-3 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] cursor-pointer"
+            >
+              <img class="w-16 h-16" src="assets/board.png" alt="" />
+              <p class="text-white">Discover Something New Today!</p>
+            </div>
+            <!-- child 3 -->
+            <div
+              class="bg-[#F4F7FF] rounded-lg flex items-center justify-center gap-4 py-2"
+            >
+              <div class="bg-white p-2 rounded-full">
+                <img class="p-1 w-12" src="assets/calender.png" alt="" />
+              </div>
+              <input id="date" type="date" class="w-28">
+            </div>
+          </div>
+          <!-- card container -->
+          <img class="mt-7" src="assets/Line 1.png" alt="" />
+          <div class="mt-2">
+            <div class="mt-5 grid grid-cols-3 gap-5">
+              <!-- card 1 -->
+              <div class="bg-[#F4F7FF] rounded-lg p-4">
+                <p
+                  class="bg-white px-3 py-2 rounded-lg text-sm w-[100px] text-center"
+                >
+                  ShopEase
+                </p>
+                <h2 id="card-1-title" class="text-xl mb-3 mt-3">
+                  Fix Mobile Button Issue
+                </h2>
+                <p class="bg-white rounded-lg p-3 text-sm font-light">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly
+                </p>
+                <img class="mt-3 mb-2" src="assets/Line 1.png" alt="" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-[11px] text-">Deadline</p>
+                    <p class="text-[13px] font-semibold">21 March 2025</p>
+                  </div>
+                  <button
+                  onclick="cardTitle1()"
+                    id="card-1-btn"
+                    class="btn bg-[#3752FD] text-white rounded-lg py-2 px-4"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="bg-[#F4F7FF] rounded-lg p-4">
+                <p
+                  class="bg-white px-3 py-2 rounded-lg text-sm w-[100px] text-center"
+                >
+                  CloudSync
+                </p>
+                <h2 class="text-xl mb-3 mt-3">Add Dark Mode</h2>
+                <p class="bg-white rounded-lg p-3 text-sm font-light">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly
+                </p>
+                <img class="mt-3 mb-2" src="assets/Line 1.png" alt="" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-[11px] text-">Deadline</p>
+                    <p class="text-[13px] font-semibold">21 March 2025</p>
+                  </div>
+                  <button onclick="cardTitle1()"
+                    id="card-2-btn"
+                    class="btn bg-[#3752FD] text-white rounded-lg py-2 px-4"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="bg-[#F4F7FF] rounded-lg p-4">
+                <p
+                  class="bg-white px-3 py-2 rounded-lg text-sm w-[100px] text-center"
+                >
+                  SwiftPay
+                </p>
+                <h2 class="text-xl mb-3 mt-3">Optimize Home page </h2>
+                <p class="bg-white rounded-lg p-3 text-sm font-light">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly
+                </p>
+                <img class="mt-3 mb-2" src="assets/Line 1.png" alt="" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-[11px] text-">Deadline</p>
+                    <p class="text-[13px] font-semibold">21 March 2025</p>
+                  </div>
+                  <button
+                    id="card-3-btn"
+                    class="btn bg-[#3752FD] text-white rounded-lg py-2 px-4"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="bg-[#F4F7FF] rounded-lg p-4">
+                <p
+                  class="bg-white px-3 py-2 rounded-lg text-sm w-[100px] text-center"
+                >
+                  Meta
+                </p>
+                <h2 class="text-xl mb-3 mt-3">Add new emoji 🤲</h2>
+                <p class="bg-white rounded-lg p-3 text-sm font-light">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly
+                </p>
+                <img class="mt-3 mb-2" src="assets/Line 1.png" alt="" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-[11px] text-">Deadline</p>
+                    <p class="text-[13px] font-semibold">21 March 2025</p>
+                  </div>
+                  <button
+                    id="card-4-btn"
+                    class="btn bg-[#3752FD] text-white rounded-lg py-2 px-4"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- card 5 -->
+              <div class="bg-[#F4F7FF] rounded-lg p-4">
+                <p
+                  class="bg-white px-3 py-2 rounded-lg text-sm w-[100px] text-center"
+                >
+                  Google LLC
+                </p>
+                <h2 class="text-xl mb-3 mt-3">Integrate OpenAI API</h2>
+                <p class="bg-white rounded-lg p-3 text-sm font-light">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly
+                </p>
+                <img class="mt-3 mb-2" src="assets/Line 1.png" alt="" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-[11px] text-">Deadline</p>
+                    <p class="text-[13px] font-semibold">21 March 2025</p>
+                  </div>
+                  <button
+                    id="card-5-btn"
+                    class="btn bg-[#3752FD] text-white rounded-lg py-2 px-4"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- card 6 -->
+              <div class="bg-[#F4F7FF] rounded-lg p-4">
+                <p
+                  class="bg-white px-3 py-2 rounded-lg text-sm w-[100px] text-center"
+                >
+                  Glassdoar
+                </p>
+                <h2 class="text-xl mb-3 mt-3">Improve Job searching</h2>
+                <p class="bg-white rounded-lg p-3 text-sm font-light">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly
+                </p>
+                <img class="mt-3 mb-2" src="assets/Line 1.png" alt="" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-[11px] text-">Deadline</p>
+                    <p class="text-[13px] font-semibold">21 March 2025</p>
+                  </div>
+                  <button
+                    id="card-6-btn"
+                    class="btn bg-[#3752FD] text-white rounded-lg py-2 px-4"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- activity log -->
+        <div class="bg-white rounded-lg p-4">
+          <div class="flex flex-col mt-4 items-center justify-center">
+            <div
+              class="flex justify-center items-center mb-2 text-[14px] gap-2"
+            >
+              <img class="w-4 h-4" src="assets/activity.png" alt="" />
+              <p>Activity Log</p>
+            </div>
+            <button id="clear-history"
+              class="btn w-32 bg-[#3752FD] text-white px-2 mb-4 rounded-lg"
+            >
+              Clear History
+            </button>
+          </div>
+
+          <img src="assets/Line 1.png" alt="" />
+          <div id="activity-log" class="text-center rounded-xl mt-5 p-1">
+
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="scrpt/devboard.js"></script>
+    <script src="scrpt/utilitie.js"></script>
+  </body>
+</html>
